@@ -3,11 +3,11 @@ import { useTimer } from "../hooks/useTimer";
 import "./timer.css";
 
 export const TimerNew = () => {
-  const [isExpired4, dateValue4] = useTimer("December 9, 2021 00:00:00");
+  const [isLinkExpired, dateValue] = useTimer("December 9, 2021 00:00:00");
   return (
     <div className="timer-wrapper">
       <span className="date-container">
-        {isExpired4 ? (
+        {isLinkExpired ? (
           <>
             <div className="expired-message-wrapper">
               <div className="expired-message-container">
@@ -21,8 +21,8 @@ export const TimerNew = () => {
         ) : (
           <>
             <h3>Test link expires in</h3>
-            <span>{dateValue4.hours}</span>:<span>{dateValue4.minutes}</span>:
-            <span>{dateValue4.seconds}</span>
+            <span>{dateValue.hours}</span>:<span>{dateValue.minutes}</span>:
+            <span>{dateValue.seconds}</span>
           </>
         )}
       </span>

@@ -19,8 +19,8 @@
   border-radius: 5px;
 }
 .expired-message-wrapper {
-  font-size: 1.8rem;
-  position: absolute;
+  font-size: 1.4rem;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
