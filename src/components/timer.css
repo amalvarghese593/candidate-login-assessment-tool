@@ -1,0 +1,39 @@
+.timer-wrapper {
+  padding: 20px;
+}
+.timer-wrapper h3 {
+  font-weight: 400;
+}
+.date-container {
+  padding: 10px 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 5px #dadce0, 8px 8px 5px #a7aaaf, -8px -8px 5px #ffffff;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  display: flex;
+  justify-content: center;
+}
+.date-container span {
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 4px;
+  border-radius: 5px;
+}
+.expired-message-wrapper {
+  font-size: 1.8rem;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.expired-message-container {
+  border: 3px dashed orange;
+  border-radius: 5px;
+  padding: 20px;
+}
