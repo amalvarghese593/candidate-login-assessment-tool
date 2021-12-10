@@ -13,16 +13,16 @@ export const TestPage = (props) => {
     e.returnValue = "";
   });
   const testDuration = Number(props.testDurationPassed);
-  const [isExpired3, dateValue3] = useTimer(testDuration, true);
+  const [isLinkExpired, dateValue] = useTimer(testDuration, true);
   return (
     <div>
       <h1>Test page</h1>
       <br />
       <strong>
         Time left:
-        {dateValue3.hours !== 0 ? <span> {dateValue3.hours}hr</span> : <></>}
-        <span> {dateValue3.minutes}min</span>
-        <span> {dateValue3.seconds}sec</span>
+        {dateValue.hours !== 0 ? <span> {dateValue.hours}hr</span> : <></>}
+        <span> {dateValue.minutes}min</span>
+        <span> {dateValue.seconds}sec</span>
       </strong>
       <Switch />
     </div>
