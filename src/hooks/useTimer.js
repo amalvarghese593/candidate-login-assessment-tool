@@ -34,21 +34,6 @@ export const useTimer = (passedValue, isDuration = false) => {
       }
     }, 1000);
   };
-  // useEffect(() => {
-  //   if (isDuration === true) {
-  //     setEndTime(Date.now() + passedValue * 60 * 1000);
-  //   } else {
-  //     const countdownDate = new Date(passedValue).getTime();
-  //     setEndTime(countdownDate);
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   setTimer();
-  //   return () => {
-  //     clearInterval(interval.current);
-  //   };
-  // }, [endTime]);
   useEffect(() => {
     setTimer();
     return () => {
