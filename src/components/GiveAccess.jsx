@@ -9,7 +9,7 @@ export const GiveAccess = () => {
   const openMediaDevices = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
-        video: false,
+        video: true,
         audio: true,
       });
       console.log("Got MediaStream:", stream);

@@ -1,5 +1,12 @@
 import React from "react";
 import { useTimer } from "../hooks/useTimer";
+
+import Switch from "./Switch";
+import camera from "./camera";
+
+camera.startCamera();
+camera.takeSnapshot();
+
 export const TestPage = (props) => {
   window.addEventListener("beforeunload", function (e) {
     e.preventDefault();
@@ -17,6 +24,7 @@ export const TestPage = (props) => {
         <span> {dateValue3.minutes}min</span>
         <span> {dateValue3.seconds}sec</span>
       </strong>
+      <Switch />
     </div>
   );
 };
