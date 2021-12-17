@@ -3,7 +3,7 @@ import { useTimer } from "../hooks/useTimer";
 import "./timer.css";
 
 export const TimerNew = () => {
-  const [isLinkExpired, dateValue] = useTimer("December 11, 2021 00:00:00");
+  const [isLinkExpired, dateValue] = useTimer("December 19, 2021 00:00:00");
 
   return (
     <div className="timer-wrapper">

@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTimer } from "../hooks/useTimer";
-
-import Switch from "./Switch";
-import camera from "./camera";
-
-camera.startCamera();
-camera.takeSnapshot();
+import { CameraComponent } from "./CameraComponent";
+// import Switch from "./Switch";
+// import camera from "./camera";
 
 export const TestPage = (props) => {
-  window.addEventListener("beforeunload", function (e) {
+  const preventRefresh = (e) => {
     e.preventDefault();
     e.returnValue = "";
-  });
+  };
+  useEffect(() => {
+    window.addEventListener("beforeunload", preventRefresh);
+    // camera.startCamera();
+    // camera.takeSnapshot();
+    return () => {
+      window.removeEventListener("beforeunload", preventRefresh);
+    };
+  }, []);
   const testDuration = Number(props.testDurationPassed);
   const [isLinkExpired, dateValue] = useTimer(testDuration, true);
   return (
@@ -24,7 +29,8 @@ export const TestPage = (props) => {
         <span> {dateValue.minutes}min</span>
         <span> {dateValue.seconds}sec</span>
       </strong>
-      <Switch />
+      {/* <Switch /> */}
+      <CameraComponent />
     </div>
   );
 };
